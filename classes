@@ -1,0 +1,20 @@
+# gere informações de objetos em comum
+
+class Cliente():
+    def __init__(self, nome, email, plano):
+        self.nome = nome
+        self.email = email
+        self.plano = ['Grátis', 'Premium']
+        if plano in self.plano:
+            self.plano = plano
+        else:
+            raise Exception('Plano inválido')
+        
+    def mudar_plano(self, novo):
+        if novo in self.plano:
+            self.plano = novo
+        else:
+            raise Exception('Plano inválido')
+
+cliente = Cliente('Anna', 'annaange11@gmail.com', 'Grát')
+print(cliente.nome)
