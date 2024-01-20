@@ -1,4 +1,6 @@
-# gere informações de objetos em comum
+# classe- gere informações de objetos em comum
+
+# instância- elemento que perteçe a uma classe
 
 class Cliente():
     def __init__(self, nome, email, plano):
@@ -11,10 +13,12 @@ class Cliente():
             raise Exception('Plano inválido')
         
     def mudar_plano(self, novo):
-        if novo in self.plano:
+        plano = ['Grátis', 'Premium']
+        if novo in plano:
             self.plano = novo
+            print(f'Agora seu plano é {self.plano}')
         else:
             raise Exception('Plano inválido')
 
-cliente = Cliente('Anna', 'annaange11@gmail.com', 'Grát')
-print(cliente.nome)
+cliente = Cliente('Anna', 'annaange11@gmail.com', 'Grátis')
+cliente.mudar_plano('Grátis')
